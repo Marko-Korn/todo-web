@@ -1,0 +1,51 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% include "header.html" %}
+
+{% if not current_user.is_authenticated %}
+<div class="not-logged">
+    <h1 class="red">Log In or Register</h1>
+</div>
+{% else %}
+<div class="container">
+    <h1>To-do list</h1>
+    <hr>
+    {% for category, tasks in tasks_by_category.items() %}
+    <div class="row outln">
+        <h3><b>{{ category }}</b></h3>
+
+        {% for task, status, color in tasks %}
+        <div class="column-task" id="task_{{ task.id }}" contenteditable="true" data-task-id="{{ task.id }}">
+            <b>{{ task.task }}</b>
+        </div>
+
+        <div class="column">
+            <b>{{ task.due_date }}</b>
+            <div>
+                <span style="color: {{ color }};">{{ status }}</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <button class="button">
+                <a class="red" href="{{url_for('delete_task', task_id=task.id) }}">
+                    Delete
+                </a>
+            </button>
+        </div>
+        <hr class="red">
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="mb-5 add_btn">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto hid_form">
+                <!--Rendering the new task form here-->
+                {{ render_form(form, novalidate=True, button_map={"submit": "warning"}) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

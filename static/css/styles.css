@@ -1,0 +1,129 @@
+body {
+background: #1a1a1a;
+font-family: 'JetBrains Mono';
+}
+
+.btn {
+background: #ff4d5a;
+color: white;
+border-color: #ff4d5a;
+outline-color: #ff4d5a;
+max-width: 40%;
+  margin: 0;
+position: relative;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+color: white;
+text-align: center;
+}
+
+h2 {
+color: white;
+}
+
+.form-label {
+color: white;
+}
+
+.task {
+border:1px solid #ff4d5a;
+}
+
+.red {
+color: #ff4d5a;
+text-decoration: none;
+}
+
+.container {
+max-width: 60%;
+color: white;
+
+}
+
+.x-btn {
+float: right;
+border:1px solid #ff4d5a;
+background: #1a1a1a;
+}
+
+.card {
+max-width: 100%;
+}
+
+.sub-card {
+max-width: 80%;
+}
+
+.dts {
+max-width: 20%;
+float: right;
+}
+
+.column {
+  float: left;
+  width: 15%;
+  color: white;
+}
+
+.column-task {
+  float: left;
+  width: 70%;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-link{
+color:white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  color: white;
+  background: white;
+}
+
+.outln {
+  border:1px solid #ff4d5a;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.button {
+float: right;
+border-radius: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #ff4d5a;
+  color: white;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.not-logged {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    }
+
+.subheading {
+text-align: center;
+align-items: center;
+}
+
+.page-heading {
+text-align: center;
+align-items: center;
+}
